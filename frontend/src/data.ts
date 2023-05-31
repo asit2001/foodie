@@ -3,47 +3,47 @@ import { City } from "./type";
 
 const  data =  [
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/pizza.png?width=100&height=57&fit=crop&bg-color=440063&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fpizza.webp?alt=media",
     name: "Pizza",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/chicken.png?width=100&height=57&fit=crop&bg-color=cc3a2f&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fchicken.webp?alt=media",
     name: "Chicken",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/burgers.png?width=100&height=57&fit=crop&bg-color=fabe00&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fburgers.webp?alt=media",
     name: "Burgers",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/chinese.png?width=100&height=57&fit=crop&bg-color=9c006d&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fchinese.webp?alt=media",
     name: "Chinese",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/thai.png?width=100&height=57&fit=crop&bg-color=007e8a&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fthai.webp?alt=media",
     name: "Thai",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/curry.png?width=100&height=57&fit=crop&bg-color=440063&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fcurry.webp?alt=media",
     name: "Indian",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/pasta.png?width=100&height=57&fit=crop&bg-color=007e8a&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fpasta.webp?alt=media",
     name: "Italian",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/dessert.png?width=100&height=57&fit=crop&bg-color=00ccbc&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fdessert.webp?alt=media",
     name: "Dessert",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/organic.png?width=100&height=57&fit=crop&bg-color=440063&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Forganic.webp?alt=media",
     name: "Healthy",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/acai.png?width=100&height=57&fit=crop&bg-color=cc3a2f&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Facai.png?alt=media",
     name: "Breakfast",
   },
   {
-    img: "https://co-restaurants.roocdn.com/images/17262f37bd32930c2b8a7c14d8fd1d8474af13cc/shortcut/vegan.png?width=100&height=57&fit=crop&bg-color=fabe00&auto=webp&format=png",
+    img: "https://firebasestorage.googleapis.com/v0/b/quora-clone-asit.appspot.com/o/public%2Fvegan.webp?alt=media",
     name: "Vegan",
   },
 ];
