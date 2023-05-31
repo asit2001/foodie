@@ -1,0 +1,15 @@
+export const CART = "cart"
+export const CART__THUNKS = `${CART}/setCart`
+export const RESTAURANT = "restaurant"
+export const GET_RESTAURANT_THUNK = `${RESTAURANT}/getRestaurant`
+export const CITY = "city"
+export const SEARCH = "search"
+export const SEARCHED_PRODUCT_THUNK = `${SEARCH}/getProduct`
+export const USER = `user`
+export const USER_LOGIN_THUNK = `${USER}/login`
+export const USER_LOGOUT_THUNK = `${USER}/logOut`
+export const USER_REGISTER_THUNK = `${USER}/register`
+export const FAVORITE_THUNKS = `${USER}/favorite`
+export const ORDER_THUNKS = `${USER}/order`
+export const ADDRESS_THUNKS = `${USER}/address`
+export const USER_ALL_DETAILS = "userDetails"

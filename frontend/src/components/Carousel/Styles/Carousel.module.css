@@ -1,0 +1,70 @@
+.sliderContainer{
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.sliderList{
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  gap: 10px;
+  list-style: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.leftArrowContainer,
+.rightArrowContainer {
+  display: flex;
+  height: 57px;
+  width: 100px;
+  position: absolute;
+  flex-direction: row-reverse;
+  z-index: 99;
+}
+.leftArrowContainer {
+  left: 0;
+  transform: scale(-1);
+}
+.rightArrowContainer {
+  right: 0;
+  top: 0;
+}
+.arrowBg {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #fff;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  cursor: pointer;
+}
+.listItem{
+  text-decoration: none;
+  color: var(--color-black);
+}
+@media screen and (max-width: 850px) {
+  .sliderContainer{
+    overflow-x: scroll;
+  }
+  .sliderList::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+
+  .sliderList::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  .sliderList::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  .leftArrowContainer,
+  .rightArrowContainer{
+    display: none;
+  }
+}

@@ -1,0 +1,97 @@
+.container{
+    margin: 20px 0 0 20px;
+}
+.title{
+    font-size: 1.2rem;
+    color: var(--color-dark-black);
+    font-weight: 600;
+}
+.sub{
+    font-size: 14px;
+    color: var(--color-dark-gray);
+    margin-bottom: 30px;
+}
+.address__container{
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    overflow: hidden;
+}
+.address,.address_editable{
+    position: relative;
+    height: 150px;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+.address__details{
+    max-width: 250px;
+}
+.address__type{
+    font-size: 16px;
+    color: var(--color-dark-black);
+    font-weight: 600;
+}
+.address__name{
+    font-size: 13px;
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+.address__btn,.address__btn__outline{
+    height: 34px;
+    width: 120px;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    background-color: var(--color-dark-green);
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+}
+.address__btn__outline{
+    color: var(--color-dark-green);
+    border: 1px solid var(--color-dark-green);
+    background-color: transparent;
+    font-weight: 600;
+}
+.account__container{
+    margin-top: 20px;
+}
+.account__title{
+    padding-left: 30px;
+    font-weight: 600;
+    color: var(--color-dark-black);
+    margin-bottom: 30px;
+}
+.address_editable{
+    border: 1px solid var(--color--light-border);
+    height: 100%;
+    padding: 10px;
+    height: 120px;
+}
+.account__btnContainer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+.account__btn{
+    text-decoration: none;
+    color: var(--color-orange);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+@media screen and (max-width:680px) {
+    .container{
+        margin: 0;
+    }
+    .address__container{
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,123 @@
+.product {
+  max-width: 285px;
+  padding: 20px 20px 15px;
+  display: block;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.product:hover {
+  border: 1px solid var(--color-gray);
+}
+.product__img {
+  width: 100%;
+  object-fit: cover;
+}
+.product__name {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-black);
+  margin: 5px 0;
+}
+.product__cuisine {
+  font-size: 13px;
+  color: var(--color-gray);
+  margin: 4px 0;
+}
+.product__price__review {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.product__rating {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 14px;
+  padding: 0 5px;
+  gap: 5px;
+}
+.price,
+.offers {
+  display: flex;
+  align-items: center;
+  color: var(--color-black);
+}
+.offers {
+  color: var(--color-brown);
+  margin: 15px 0;
+  gap: 15px;
+}
+.offers svg {
+  fill: var(--color-brown);
+}
+.price__value {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.view__button {
+  display: block;
+  visibility: hidden;
+  margin: 10px auto;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  color: var(--color-blue);
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+}
+.product:hover .view__button {
+  visibility: visible;
+}
+.view__button:hover {
+  color: var(--color-gray);
+}
+
+/* for small size */
+.product_sm {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+.product_sm .product__img,
+.product_sm span:has(.product__img) {
+  width: 90px !important;
+  height: 98px !important;
+}
+.product_sm .offers {
+  gap: 5px;
+}
+@media screen and (max-width: 850px) {
+  .product {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+  .product__img,
+  .product span:has(.product__img) {
+    width: 90px !important;
+    height: 98px !important;
+  }
+  .offers {
+    gap: 5px;
+  }
+  .offers svg {
+    height: 16px;
+    width: 16px;
+  }
+  .offers span {
+    font-size: 14px;
+  }
+  .product__price__review {
+    justify-content: start;
+    gap: 20px;
+  }
+  .view__button {
+    display: none;
+  }
+}

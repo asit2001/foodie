@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.pexels.com/photos/8753672/pexels-photo-8753672.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+.container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+}
+.loginModel{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--color-white);
+    height: 80vh;
+}
+.imageContainer{
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form,.from__error{
+    padding: 30px;
+    min-width: 450px;
+}
+.inputContainer{
+    padding-bottom: 10px;
+}
+.logo{
+    display: block;
+    margin: 10px auto;
+}
+.title{
+    padding: 30px 0 10px;
+    font-weight: 500;
+}
+.subTitle{
+    padding-bottom:20px;
+    color: var(--color-gray);
+}
+.label{
+    display: block;
+    font-size: 15px;
+    color: var(--color-black);
+    padding-top: 20px;
+    text-transform: capitalize;
+}
+
+.inputContainer input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.12rem;
+    border-bottom: 1px solid var(--color--light-border);
+}
+.from__error input{
+    border-bottom: 1px solid var(--color-light-red);
+}
+.linkContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.forgetPassword{
+    text-decoration: none;
+    padding: 10px;
+    color: var(--color-blue);
+}
+.submitBtn{
+    display: block;
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-size: 15px;
+    background: rgb(255,153,58);
+    background: linear-gradient(184deg, rgba(255,153,58,1) 0%, rgba(241,87,0,1) 100%);
+    cursor: pointer;
+    margin: 10px 0;
+}
+.submitBtn:hover{
+    background: linear-gradient(230deg, rgba(255,153,58,1) 0%, rgba(241,87,0,1) 100%);
+}
+.registerBtn{
+    padding: 15px 0;
+    font-size: 14px;
+    color: var(--color-black);
+}
+.registerBtn a{
+    text-decoration: none;
+    color: var(--color-blue);
+}
+@media screen and (max-width:850px) {
+    .loginModel{
+        max-height: 100vh;
+        height: 100%;
+    }
+    .form,.from__error{
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+    }
+    .imageContainer{
+        display: none;
+    }
+}

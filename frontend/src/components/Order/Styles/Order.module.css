@@ -1,0 +1,24 @@
+.title{
+    margin: 10px 0;
+    padding-left: 30px;
+    font-weight: 600;
+    color: var(--color-dark-black);
+}
+.noOrder{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.noOrder__img{
+    margin-bottom: 20px;
+}
+.noOrder__title{
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+.noOrder__sub{
+    font-size: 14px;
+    color: var(--color-black);
+}

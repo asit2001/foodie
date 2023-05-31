@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+.product__container{
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.shop__details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin: 10px 0;
+    border-bottom: 1px dashed var(--color-gray);
+    
+}
+.shop__title{
+    font-size: 1.43rem;
+    color: var(--color-dark-black);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+.shop__cuisine,.shop__address{
+    font-size: 14px;
+    color: var(--color-black);
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.shop__ratings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.rating__icon{
+    color: var(--color-green);
+    height: 20px;
+    width: 20px;
+}
+.rating__text{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-green);
+}
+.rating_count{
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-gray);
+}
+.time__offer{
+    padding: 20px 0 30px;
+    border-bottom: 1px solid var(--color-gray);
+}
+.time__price{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+.time__cost{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: var(--color-dark-black);
+    gap: 10px;
+}
+.time__price__text{
+    font-size: 15px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+.offers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.offer__container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.offer__title{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.offer__icon{
+    fill: var(--color-brown);
+    height: 24px;
+    width: 24px;
+}
+.offer__subtitle{
+    margin: 5px;
+    color: var(--color-gray);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.menu{
+    min-height: 100vh;
+}

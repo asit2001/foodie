@@ -1,0 +1,134 @@
+/* ? overlay */
+body:has(.model__container__active){
+    height: 100vh;
+    overflow: hidden;
+}
+
+body:has(.model__container__active)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #282c3f;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+}
+
+.model__container__active{
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    max-width: 1200px;
+    min-width: 500px;
+    background-color: var(--color-white);
+    z-index: 9999;
+    padding: 20px 40px 0 0;
+}
+.model{
+    flex: .6;
+}
+.model__container__inactive{
+    display: none;
+}
+.search__input{
+    padding: 10px 15px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 17px;
+    outline: none;
+    border: 1px solid var(--color--light-border);
+    color: var(--color-gray);
+}
+.search__input::placeholder{
+    color: var(--color-gray);
+}
+.results__container{
+    width: 100%;
+    margin-top: 20px;
+}
+.result__item{
+    list-style: none;
+    padding: 15px 20px;
+    border: 1px solid var(--color--light-border);
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.city__name{
+    font-size: 16px;
+    color: var(--color-black);
+}
+.state__name{
+    font-size: 13px;
+    color: var(--color-gray);
+    padding-top: 5px;
+}
+.close__btn{
+    padding: 10px 0;
+    margin: 15px 0;
+}
+.map{
+    height: 250px;
+}
+.btn_groups{
+    display: flex;
+    border: 1px solid var(--color--light-border);
+    height: 52px;
+}
+.address__btn,.address__btn__active{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 52px;
+    border-right: 1px solid var(--color--light-border);
+    padding: 10px 15px;
+    color: var(--color-black);
+}
+.address__btn:hover,.address__btn__active{
+    color: var(--color-white);
+    background-color: var(--color-dark-black);
+}
+.btn{
+    height: 52px;
+    margin-top: 15px;
+    width: 100%;
+    cursor: pointer;
+    color: var(--color-white);
+    outline: none;
+    border: none;
+    background-color: var(--color-orange);
+}
+.btn:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+@media screen and (max-width:850px) {
+    .model__container__active{
+        width: 100%;
+        padding: 20px;
+        min-width: auto;
+    }
+    .model{
+        flex: 1;
+    }
+    .result__item{
+        padding: 10px;
+    }
+    .map{
+        height: 350px;
+    }
+}
+@media screen and (max-width:500px) {
+    .map{
+        height: 250px;
+    }
+    .close__btn{
+        margin: 0;
+        padding-top: 0;
+    }
+}

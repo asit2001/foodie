@@ -1,0 +1,110 @@
+.product{
+    max-width: 285px;
+    padding: 20px 20px 15px;
+    display: block;
+    border: 1px solid transparent;
+}
+.product__img{
+    width: 240px;
+    height: 160px;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+.product__name{
+    height: 20px;
+    margin: 5px 0;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+.product__cuisine{
+    height: 15px;
+    animation: skeleton-loading 1s linear infinite alternate;
+    margin: 4px 0;
+}
+.product__price__review{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.product__rating{
+    animation: skeleton-loading 1s linear infinite alternate;
+    height: 17px;
+    width: 50px;
+    padding: 0 5px;
+}
+
+.offers{
+    height: 19px;
+    animation: skeleton-loading 1s linear infinite alternate;
+    margin: 15px 0;
+    gap: 15px;
+}
+.price{
+    height: 17px;
+    width: 50px;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+.view__button{
+    display:block;
+    visibility: hidden;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+}
+
+
+/* for small size props*/
+.product__sm {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+  }
+  .product__sm .product__name{
+    width: 150px;
+  }
+  .product__sm .product__img,
+  .product__sm span:has(.product__img) {
+    width: 90px !important;
+    height: 98px !important;
+  }
+  .product__sm .offers {
+    margin: 5px 0;
+  }
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
+  @media screen and (max-width:850px) {
+    .product{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+    .product__img,.product span:has(.product__img){
+        width: 90px !important;
+        height: 98px !important;
+    }
+    .offers{
+        gap: 5px;
+    }
+    .offers svg{
+        height: 16px;
+        width: 16px;
+    }
+    .offers span{
+        font-size: 14px;
+    }
+    .product__price__review{
+        justify-content: start;
+        gap: 20px;
+    }
+    .view__button{
+        display: none;
+    }
+}
