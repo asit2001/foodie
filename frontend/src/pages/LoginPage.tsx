@@ -44,7 +44,7 @@ function LoginPage() {
     e.preventDefault();
     registerUser({ email, name, password })
       .then(({type})=>{
-        if (!type.includes("rejected")) {
+        if (!type && !type.includes("rejected")) {
           navigate("/login");
           
         }
