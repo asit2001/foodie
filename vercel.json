@@ -1,6 +1,6 @@
 {
   "builds": [
-    { "src": "backend/src/app.js", "use": "@now/node" },
+    { "src": "backend/src/index.ts", "use": "@now/node" },
     {
       "src": "frontend/package.json",
       "use": "@now/static-build",
@@ -11,7 +11,7 @@
     {
       "src": "/api/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "api/src/app.js"
+      "dest": "api/src/index.ts"
     },
     {
       "src": "/static/(.*)",
