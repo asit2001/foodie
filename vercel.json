@@ -11,7 +11,7 @@
     {
       "src": "/api/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "api/src/index.ts"
+      "dest": "backend/src/index.ts"
     },
     {
       "src": "/static/(.*)",
