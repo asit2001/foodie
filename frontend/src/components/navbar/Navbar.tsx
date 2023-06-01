@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Cart, DownArrow, Help, Logo, Offer, Search, User } from "../icons";
 import styles from "./styles/Navbar.module.css";
 import { setShowCityModel, useAppDispatch, useAppSelector } from "../../redux";
@@ -12,14 +12,13 @@ function Navbar() {
     state.city.value,
     state.user.name
   ]);
-
-
+  const navigate = useNavigate();
   return (
     <>
       <header className={styles.header}>
         <nav className={styles.navbar}>
-          <Link to={"/"} className={styles.left__group}>
-            <Logo />
+          <Link to={""} className={styles.left__group}>
+            <Logo onClick={()=>navigate("/")}/>
             <div
               className={styles.location}
               onClick={() => {
