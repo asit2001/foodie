@@ -11,7 +11,6 @@ import MenuItem from "../components/MenuItem/MenuItem";
 import { ClearCartModel } from "../components/Models";
 import { Offers } from "../data";
 import ProductHeader from "../components/ProductHeader";
-import { cartThunk, useAppDispatch } from "../redux";
 
 function ProductPage() {
   const productId = useLocation().pathname.split("-").at(-1);
@@ -20,7 +19,6 @@ function ProductPage() {
   const [data, setData] = useState<FetchResponse>();
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState(data?.menu);
-  const dispatch = useAppDispatch()
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/api/restaurant/product/${productId}`,{
@@ -28,8 +26,7 @@ function ProductPage() {
       })
       .then((res: AxiosResponse<FetchResponse, any>) => setData(res.data))
       .catch(() => navigate("/404"));
-      dispatch(cartThunk({opType:"get"}))
-  }, [productId, navigate,dispatch]);
+  }, [productId, navigate]);
 
   useEffect(() => {
     setFilteredData(
