@@ -56,11 +56,20 @@ export async function userLogin(req: Request, res: Response) {
     const key = Date.now().toString() + user._id.toString()
     await KeyValueModel.create({key:key,value:true})
     let token =  sign({user_id:user.id,name:user.name,key:key,email:email},process.env.JWT_SECRET,{expiresIn:"1h"})
-    res.cookie("jwtToken",token,{
-      sameSite:"none",
-      secure:true,
-      maxAge:60 * 60 * 1000
-    })
+    if (process.env.NODE_ENV==="development") {
+      res.cookie("jwtToken",token,{
+        sameSite:"none",
+        secure:true,
+        maxAge:60 * 60 * 1000
+      })
+    }else{
+      res.cookie("jwtToken",token,{
+        sameSite:"strict",
+        httpOnly:true,
+        secure:true,
+        maxAge:60 * 60 * 1000
+      })
+    }
     res.json({name:user.name,email:email})
   } catch (e) {
     res.status(404).json({ error: e.message });
