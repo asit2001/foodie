@@ -1,4 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import {useAppDispatch} from "."
 import {
   CART__THUNKS,
   GET_RESTAURANT_THUNK,
@@ -26,6 +27,18 @@ import {
   AddressProps,
 } from "./props";
 axios.defaults.withCredentials = true;
+const authAxios = axios.create();
+
+authAxios.interceptors.request.use((config)=>{
+  if (document.cookie) {
+    config.withCredentials = true;
+    return config
+  }
+  const dispatch = useAppDispatch();
+  dispatch(expireUser())
+  return Promise.reject(new Error('Cookie not found'))
+})
+
 
 export const getRestaurantsThunks = createAsyncThunk(
   GET_RESTAURANT_THUNK,
@@ -77,7 +90,7 @@ export const logOutThunk = createAsyncThunk(
   USER_LOGOUT_THUNK,
   async (_, { dispatch }) => {
     let url = generateURL("/api/user/logout");
-    await axios.delete(url);
+    await authAxios.delete(url);
     dispatch(clearCart());
     return null;
   }
@@ -97,32 +110,28 @@ export const RegisterThunks = createAsyncThunk(
 export const cartThunk = createAsyncThunk(
   CART__THUNKS,
   async ({ restaurant_id, menu_id, opType }: CartProps, { dispatch }) => {
-    try {
       let url = generateURL("/api/user/cart");
       if (opType === "get") {
-        let carts = await axios.get(url);
+        let carts = await authAxios.get(url);
 
         return carts.data as cartResponse;
       }
 
       if (opType === "inc") {
-        let carts = await axios.post(url, {
+        let carts = await authAxios.post(url, {
           restaurant_id,
           menu_id,
         });
         return carts.data as cartResponse;
       }
-      let carts = await axios.delete(url, {
+      let carts = await authAxios.delete(url, {
         data: {
           restaurant_id,
           menu_id,
         },
       });
       return carts.data as cartResponse;
-    } catch (error) {
-      dispatch(expireUser());
-      throw error;
-    }
+    
   }
 );
 
@@ -132,13 +141,13 @@ export const favoriteThunks = createAsyncThunk(
     let url = generateURL("/api/user/favorite");
     let response;
     if (method === "POST") {
-      response = await axios.post(url, {
+      response = await authAxios.post(url, {
         restaurant_id,
       });
     } else if (method === "GET") {
-      response = await axios.get(url);
+      response = await authAxios.get(url);
     } else {
-      response = await axios.delete(url, {
+      response = await authAxios.delete(url, {
         data: {
           restaurant_id,
         },
@@ -154,11 +163,11 @@ export const orderThunk = createAsyncThunk(
     let url = generateURL("/api/user/order");
     let response;
     if (method === "POST") {
-      response = await axios.post(url, { cart_id });
+      response = await authAxios.post(url, { cart_id });
     } else if (method === "GET") {
-      response = await axios.get(url);
+      response = await authAxios.get(url);
     } else {
-      response = await axios.delete(url, {
+      response = await authAxios.delete(url, {
         data: {
           cart_id,
         },
@@ -181,7 +190,7 @@ export const addressThunks = createAsyncThunk(
     const url = generateURL("/api/user/address");
     let response;
     if (method === "POST") {
-      response = await axios.post(url, {
+      response = await authAxios.post(url, {
         address,
         address_type,
         flat_number,
@@ -189,11 +198,11 @@ export const addressThunks = createAsyncThunk(
       });
       return response.data as Addresses
     }else if (method ==="GET") {
-      response = await axios.get(url);
+      response = await authAxios.get(url);
       return response.data as Addresses[]
     }
     else{
-      await axios.delete(url,{
+      await authAxios.delete(url,{
         data:{
           address_id
         }
