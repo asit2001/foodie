@@ -5,6 +5,7 @@ import { RightArrow } from "../icons";
 import styles from "./Styles/Carousel.module.css";
 import { useWindowDimensions } from "../../hooks";
 import { Link } from "react-router-dom";
+import {LazyLoadImage as Img} from "react-lazy-load-image-component"
 
 function Carousel() {
   const [carouselRight, setCarouselRight] = useState(false);
@@ -30,7 +31,7 @@ function Carousel() {
         {data.map(({ img, name },id) => {
           return (
             <Link className={styles.listItem} to={`/search?q=${name.toLowerCase()}`} key={id}>
-              <img src={img} alt={name} />
+              <Img height={"53px"} width={"100px"} src={img} alt={name} effect="blur"/>
               <p>{name}</p>
             </Link>
           );
