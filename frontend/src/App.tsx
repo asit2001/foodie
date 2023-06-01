@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./App.css";
-import {Home,ProductPage,SearchPage,LoginPage,CheckOut, Account} from "./pages";
+import {Home,ProductPage,SearchPage,LoginPage,CheckOut, Account, HelpPage} from "./pages";
 import store from "./redux/store";
 
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/support",
-    element: <Home />,
+    element: <HelpPage />,
   },
   {
     path: "/my-account",

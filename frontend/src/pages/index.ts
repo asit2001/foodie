@@ -4,4 +4,5 @@ import SearchPage from "./SearchPage";
 import CheckOut from "./CheckOut";
 import LoginPage from "./LoginPage";
 import Account from "./Account";
-export {Home,ProductPage,SearchPage,CheckOut,LoginPage,Account}
+import HelpPage from "./HelpPage";
+export {Home,ProductPage,SearchPage,CheckOut,LoginPage,Account,HelpPage}
